@@ -5,8 +5,8 @@ const TodoItems = ({ todoItems, onDeleteClick }) => {
   return (
     <div className={styles.itemsContainer}>
       {todoItems.map((item) => (
-        // eslint-disable-next-line react/jsx-key
         <TodoItem
+          key = {item.name}
           todoDate={item.date}
           todoName={item.name}
           onDeleteClick={onDeleteClick}

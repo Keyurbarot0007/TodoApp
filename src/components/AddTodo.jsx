@@ -1,10 +1,11 @@
 // eslint-disable-next-line no-unused-vars
 import { useState } from "react";
+import { BiMessageAdd } from "react-icons/bi";
 
 // eslint-disable-next-line react/prop-types
 function AddTodo({ onNewItem }) {
-  const [todoName, setTodoName] = useState();
-  const [dueDate, setDueDate] = useState();
+  const [todoName, setTodoName] = useState("");
+  const [dueDate, setDueDate] = useState("");
 
   const handleNameChange = (event) => {
     setTodoName(event.target.value);
@@ -40,7 +41,7 @@ function AddTodo({ onNewItem }) {
             className="btn btn-success kg-button"
             onClick={handleAddButtonCLick}
           >
-            Add
+            <BiMessageAdd />
           </button>
         </div>
       </div>
